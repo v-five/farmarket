@@ -8,7 +8,7 @@
  * Controller of the fermaApp
  */
 angular.module('fermaApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', function ($scope, dataService) {
 
       $scope.homeItems = [
           {
@@ -56,6 +56,5 @@ angular.module('fermaApp')
               name:'First name 2'
           }
       ];
-
-
+      
   });

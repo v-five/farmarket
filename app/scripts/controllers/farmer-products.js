@@ -8,10 +8,6 @@
  * Controller of the fermaApp
  */
 angular.module('fermaApp')
-  .controller('FarmerProductsCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('FarmerProductsCtrl', function ($scope, dataService) {
+
   });
