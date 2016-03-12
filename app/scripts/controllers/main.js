@@ -56,5 +56,5 @@ angular.module('fermaApp')
               name:'First name 2'
           }
       ];
-      
+
   });
