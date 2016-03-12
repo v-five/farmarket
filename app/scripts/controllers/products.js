@@ -33,57 +33,112 @@ angular.module('fermaApp')
       {
         image: 'http://lorempixel.com/700/400/',
         name:'First name',
-        category:'branza'
+        category:'branza',
+        owner:{
+          id: 2,
+          name: 'John de john',
+          rating: '3'
+        }
       },
       {
         image: 'http://lorempixel.com/300/400/',
         name:'First name 2',
-        category:'branza'
+        category:'branza',
+        owner:{
+          id: 2,
+          name: 'John de john',
+          rating: '3'
+        }
       },
       {
         image: 'http://lorempixel.com/600/800/',
         name:'First name 2',
-        category:'branza'
+        category:'branza',
+        owner:{
+          id: 2,
+          name: 'John de john',
+          rating: '4'
+        }
       },
       {
         image: 'http://lorempixel.com/600/800/',
         name:'First name 2',
-        category:'lapte'
+        category:'lapte',
+        owner:{
+          id: 2,
+          name: 'John de john',
+          rating: '3'
+        }
       },
       {
         image: 'http://lorempixel.com/600/800/',
         name:'First name 2',
-        category:'lapte'
+        category:'lapte',
+        owner:{
+          id: 2,
+          name: 'John de john',
+          rating: '2'
+        }
       },
       {
         image: 'http://lorempixel.com/600/800/',
         name:'First name 2',
-        category:'animale'
+        category:'animale',
+        owner:{
+          id: 2,
+          name: 'John de john',
+          rating: '3'
+        }
       },
       {
         image: 'http://lorempixel.com/600/800/',
         name:'First name 2',
-        category:'animale'
+        category:'animale',
+        owner:{
+          id: 2,
+          name: 'John de john',
+          rating: '3'
+        }
       },
       {
         image: 'http://lorempixel.com/600/800/',
         name:'First name 2',
-        category:'animale'
+        category:'animale',
+        owner:{
+          id: 2,
+          name: 'John de john',
+          rating: '5'
+        }
       },
       {
         image: 'http://lorempixel.com/600/800/',
         name:'First name 2',
-        category:'carne'
+        category:'carne',
+        owner:{
+          id: 2,
+          name: 'John de john',
+          rating: '4'
+        }
       },
       {
         image: 'http://lorempixel.com/600/800/',
         name:'First name 2',
-        category:'carne'
+        category:'carne',
+        owner:{
+          id: 2,
+          name: 'John de john',
+          rating: '2'
+        }
       },
       {
         image: 'http://lorempixel.com/600/800/',
         name:'First name 2',
-        category:'carne'
+        category:'carne',
+        owner:{
+          id: 2,
+          name: 'John de john',
+          rating: '1'
+        }
       }
     ];
 

@@ -1,17 +1,27 @@
 <div id="products" class="container content">
-
+    <h1 class="no-margin header-title">Ultimile produse adaugate</h1>
     <div class="filters">
         <h1 class="no-margin">Filtre:</h1>
         <ul class="list-inline no-margin">
             <li ng-repeat="filter in categories" ng-click="setFilter(filter.name)">{{ filter.name }}</li>
+            <li class="pull-right input"><input class="form-control" placeholder="Cauta..."/></li>
         </ul>
     </div>
 
     <div column-width="1" preserve-order masonry>
-        <div ng-repeat="product in productItems" data-category="{{product.category}}" class="masonry-brick" liquid>
-            <img ng-src="{{product.image}}"/>
-            <div class="item-overlay">
-                <span>{{product.name}}</span>
+        <div ng-repeat="product in productItems" data-category="{{product.category}}" class="masonry-brick full">
+            <div class="img-wrap" liquid>
+                <img ng-src="{{product.image}}"/>
+            </div>
+
+            <div class="item-info rates">
+                <ul class="no-margin list-unstyled">
+                    <li>Produs: <span>{{product.name}}</span></li>
+                    <li>Vanzator: <span>{{product.owner.name}}</span></li>
+                    <li>Categorie: <span>{{product.category}}</span></li>
+                </ul>
+                <div star-rating rating="product.owner.rating" read-only="true"></div>
+                <button class="btn btn-primary">Vizualizare produs</button>
             </div>
         </div>
     </div>
