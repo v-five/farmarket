@@ -26,9 +26,14 @@ angular
         controllerAs: 'main'
       })
       .when('/produse', {
-          templateUrl: 'views/products.html',
-          controller: 'ProductsCtrl',
-          controllerAs: 'products'
+        templateUrl: 'views/products.html',
+        controller: 'ProductsCtrl',
+        controllerAs: 'products'
+      })
+      .when('/produse/:slug', {
+        templateUrl: 'views/product.html',
+        controller: 'ProductCtrl',
+        controllerAs: 'product'
       })
       .when('/fermier/produse', {
         templateUrl: 'views/farmer-products.html',

@@ -1,14 +1,54 @@
-<div class="container" id="farmer-page">
+<div id="farmer-page" class="container">
     <div class="row">
         <div class="col-xs-4">
             <div class="profile-img" liquid>
                 <img ng-src="http://lorempixel.com/600/800" />
+                <span class="change-image"><i class="material-icons">create</i> Schimba poza</span>
             </div>
         </div>
-        <div class="col-xs-8">
+        <div class="col-xs-5">
             <div class="farmer-info">
                 <h1 class="no-margin">Raoul Cristian</h1>
+                <span>Locatie de baza: Timisoara</span>
+                <hr />
+                <span>Locatii disponibile pentru transport:</span>
+                <ol class="no-padding available-locations">
+                    <li>Drobeta Tr. Severin</li>
+                    <li>Sibiu</li>
+                    <li>Constanta</li>
+                </ol>
+                <button type="button" class="btn btn-primary">Adauga produs</button>
+            </div>
+        </div>
+        <div class="col-xs-3">
+            <div class="pull-right">
+                <div class="rates">
+                    <h3 class="no-margin">Calificativ</h3>
+                    <div star-rating rating="" click="" ></div>
+                    <small>(200 calificative pozitive)</small>
+                </div>
+                <div class="profile-ctas">
+                    <ul class="list-unstyled no-margin">
+                        <li><button type="button" class="btn btn-primary">Modifica profil</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="farmer-products">
+                <h2 class="no-margin">Produsele vandute de Raoul</h2>
+                <div column-width="1" preserve-order masonry>
+                    <div ng-repeat="item in farmerProducts" class="masonry-brick" liquid>
+                        <img ng-src="{{item.image}}" />
+                        <div class="item-overlay">
+                            <span>{{item.name}}</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
