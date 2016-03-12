@@ -28,6 +28,10 @@ body, html{
   margin:0;
 }
 
+.no-padding{
+  padding:0;
+}
+
 a{
   text-decoration: none;
   color:white;
@@ -62,11 +66,35 @@ label {
 
 }
 
-
-
-
 .content {
     margin-top: 50px;
+}
+.rates{
+  h3{
+    font-weight: 300;
+    color:#8a8a8a;
+  }
+
+  i {
+    cursor: pointer;
+    color: $green;
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+
+  small{
+    font-weight: 300;
+    font-size:13px;
+    color:#898989;
+  }
+}
+
+.profile-ctas{
+  margin-top:20px;
+  li{
+    margin-bottom: 10px;
+  }
 }
 
 /************* HEADER ****************/
@@ -103,49 +131,102 @@ header{
 
 }
 
-/************** HOME *****************/
-
-#home-section{
-  .masonry-brick{
-    width: 25%;
-    height: 250px;
-    .item-overlay{
-      @include transition(.2);
-      position: absolute;
-      top:0;
-      bottom:0;
+.masonry-brick{
+  width: 25%;
+  height: 250px;
+  cursor: pointer;
+  .item-overlay{
+    @include transition(.2);
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background: rgba(0,0,0,.6);
+    width: 100%;
+    height: 100%;
+    display: table;
+    opacity: 0;
+    span{
+      text-align: center;
+      margin:auto;
+      display: table-cell;
+      vertical-align: middle;
+      color:white;
       left:0;
       right:0;
-      background: rgba(0,0,0,.6);
-      width: 100%;
-      height: 100%;
-      display: table;
-      opacity: 0;
-      span{
-        text-align: center;
-        margin:auto;
-        display: table-cell;
-        vertical-align: middle;
-        color:white;
-        left:0;
-        right:0;
-        text-transform: uppercase;
-        font-size:21px;
-      }
+      text-transform: uppercase;
+      font-size:21px;
     }
-    &:hover{
-      .item-overlay{
-        opacity: 1;
-      }
+  }
+  &:hover{
+    .item-overlay{
+      opacity: 1;
     }
   }
 }
+
+/************** HOME *****************/
 
 #farmer-page {
   .profile-img {
     width: 100%;
     height: 300px;
     border-radius: 2px;
+    position: relative;
+
+    &:hover{
+      .change-image{
+        opacity: 1;
+      }
+    }
+  }
+  .farmer-info{
+    color:#777777;
+    h1{
+      font-weight: 200;
+    }
+    span{
+      color:#8a8a8a;
+      font-size:18px;
+      font-weight: 300;
+    }
+  }
+
+  .farmer-products{
+    h2{
+      margin:30px 0 10px 0;
+      font-size:24px;
+      color:#777777;
+      font-weight: 300;
+    }
+  }
+
+  .change-image{
+    @include transition(.4);
+    opacity: 0;
+    cursor: pointer;
+    text-align: center;
+    position: absolute;
+    height: 40px;
+    background: $light-green;
+    left:0;
+    right:0;
+    bottom:0;
+    color:white;
+    font-weight: 300;
+    i{
+      position: relative;
+      margin-right: 10px;
+      top:7px;
+    }
+  }
+
+  .available-locations{
+    padding-left:15px;
+    li{
+      font-weight: 300;
+    }
   }
 }
 
