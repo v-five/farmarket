@@ -8,8 +8,9 @@
  * Controller of the fermaApp
  */
 angular.module('fermaApp')
-  .controller('ProductsCtrl', function ($scope, dataService, $filter) {
-
+  .controller('ProductsCtrl', function ($scope, dataService,utils) {
+    $scope.filters = [];
+    $scope.tempProducts = [];
     $scope.categories = [
       {
         id:1,
@@ -142,11 +143,31 @@ angular.module('fermaApp')
       }
     ];
 
+    $scope.tempProducts = utils.cloneArray($scope.productItems);
 
-    $scope.setFilter = function(category){
+    $scope.addFilter = function(category){
+      var cats = $scope.filters;
+      var pos = cats.indexOf(category);
+      if(pos>=0)
+        cats.splice(pos,1);
+      else
+        cats.push(category);
 
+      if(cats.length===0){
+        utils.copyArray($scope.productItems,$scope.tempProducts);
+        return;
+      }
+
+      utils.emptyArray($scope.productItems);
+      angular.forEach($scope.tempProducts,function(item,key){
+        if(cats.indexOf(item.category)>=0){
+          $scope.productItems.push(item);
+        }
+      });
+    };
+
+    $scope.isActive = function(filter){
+      return $scope.filters.indexOf(filter)>=0;
     }
-
-
 
   });
