@@ -127,6 +127,41 @@ label {
   }
 }
 
+.flex-direction-nav {
+    a:before {
+        font-family: 'Material Icons';
+        color:$green;
+    }
+    a.flex-next:before{
+        content:'\E409';
+        line-height: 1;
+    }
+    a.flex-prev:before{
+        content:'\E5CB';
+        line-height: 1;
+    }
+
+    .flex-prev {
+        left:5px!important;
+        opacity:1;
+    }
+    .flex-next {
+        right:5px!important;
+        opacity:1;
+    }
+
+   
+}
+
+ .flexslider:hover .flex-prev {
+    opacity:1;
+    left:5px;
+}
+ .flexslider:hover .flex-next {
+    opacity:1;
+    right:5px;
+}
+
   .sell-products{
     margin-bottom: 20px;
     li{
