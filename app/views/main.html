@@ -1,9 +1,10 @@
-
-<div id="home-section" column-width="250" preserve-order masonry>
-    <div ng-repeat="item in homeItems" class="masonry-brick" liquid>
-        <img ng-src="{{item.image}}" />
-        <div class="item-overlay">
-            <span>{{item.name}}</span>
+<div class="container">
+    <div id="home-section" column-width="1" preserve-order masonry>
+        <div ng-repeat="item in homeItems" class="masonry-brick" liquid>
+            <img ng-src="{{item.image}}" />
+            <div class="item-overlay">
+                <span>{{item.name}}</span>
+            </div>
         </div>
     </div>
 </div>

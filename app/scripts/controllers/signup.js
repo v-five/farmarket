@@ -8,6 +8,6 @@
  * Controller of the fermaApp
  */
 angular.module('fermaApp')
-  .controller('SignupCtrl', function () {
+  .controller('SignupCtrl', function ($scope, dataService) {
 
   });

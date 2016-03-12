@@ -8,6 +8,6 @@
  * Controller of the fermaApp
  */
 angular.module('fermaApp')
-  .controller('FarmerCtrl', function ($scope) {
+  .controller('FarmerCtrl', function ($scope, dataService) {
 
   });
