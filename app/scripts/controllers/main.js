@@ -8,10 +8,54 @@
  * Controller of the fermaApp
  */
 angular.module('fermaApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($scope) {
+
+      $scope.homeItems = [
+          {
+              image: 'http://lorempixel.com/700/400/',
+              name:'First name'
+          },
+          {
+              image: 'http://lorempixel.com/300/400/',
+              name:'First name 2'
+          },
+          {
+              image: 'http://lorempixel.com/600/800/',
+              name:'First name 2'
+          },
+          {
+              image: 'http://lorempixel.com/600/800/',
+              name:'First name 2'
+          },
+          {
+              image: 'http://lorempixel.com/600/800/',
+              name:'First name 2'
+          },
+          {
+              image: 'http://lorempixel.com/600/800/',
+              name:'First name 2'
+          },
+          {
+              image: 'http://lorempixel.com/600/800/',
+              name:'First name 2'
+          },
+          {
+              image: 'http://lorempixel.com/600/800/',
+              name:'First name 2'
+          },
+          {
+              image: 'http://lorempixel.com/600/800/',
+              name:'First name 2'
+          },
+          {
+              image: 'http://lorempixel.com/600/800/',
+              name:'First name 2'
+          },
+          {
+              image: 'http://lorempixel.com/600/800/',
+              name:'First name 2'
+          }
+      ];
+
+
   });

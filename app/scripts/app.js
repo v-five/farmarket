@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'wu.masonry'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -24,10 +25,40 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+      .when('/produse', {
+          templateUrl: 'views/products.html',
+          controller: 'ProductsCtrl',
+          controllerAs: 'products'
+      })
+      .when('/fermier/produse', {
+        templateUrl: 'views/farmer-products.html',
+        controller: 'FarmerProductsCtrl',
+        controllerAs: 'farmer-products'
+      })
+      .when('/fermier/:slug', {
+        templateUrl: 'views/farmer.html',
+        controller: 'FarmerCtrl',
+        controllerAs: 'farmer'
+      })
+      .when('/login', {
+        templateUrl: 'views/login.html',
+        controller: 'LoginCtrl',
+        controllerAs: 'login'
+      })
+      .when('/contact', {
+        templateUrl: 'views/contact.html',
+        controller: 'ContactCtrl',
+        controllerAs: 'contact'
+      })
+      .when('/register', {
+        templateUrl: 'views/signup.html',
+        controller: 'SignupCtrl',
+        controllerAs: 'register'
+      })
+      .when('/adauga-produs', {
+        templateUrl: 'views/add-product.html',
+        controller: 'AddProductCtrl',
+        controllerAs: 'add-product'
       })
       .otherwise({
         redirectTo: '/'

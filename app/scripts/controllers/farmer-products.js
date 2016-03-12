@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name fermaApp.controller:AboutCtrl
+ * @name fermaApp.controller:FarmerProductsCtrl
  * @description
- * # AboutCtrl
+ * # FarmerProductsCtrl
  * Controller of the fermaApp
  */
 angular.module('fermaApp')
-  .controller('AboutCtrl', function () {
+  .controller('FarmerProductsCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
