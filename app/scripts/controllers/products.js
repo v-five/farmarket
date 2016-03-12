@@ -9,6 +9,7 @@
  */
 angular.module('fermaApp')
   .controller('ProductsCtrl', function ($scope, dataService,utils) {
+    $scope.searchTerm ='';
     $scope.filters = [];
     $scope.tempProducts = [];
     $scope.categories = [
@@ -145,6 +146,36 @@ angular.module('fermaApp')
 
     $scope.tempProducts = utils.cloneArray($scope.productItems);
 
+
+    var applyFiltering = function(){
+      var cats = $scope.filters;
+      var _filterSource = utils.cloneArray($scope.tempProducts);
+      if(cats.length===0){
+        utils.copyArray($scope.productItems,$scope.tempProducts);
+        return;
+      }
+
+      utils.emptyArray($scope.productItems);
+      angular.forEach(_filterSource,function(item,key){
+        if(cats.indexOf(item.category)>=0){
+          $scope.productItems.push(item);
+        }
+      });
+    }
+
+    var applySearch = function(){
+      if($scope.searchTerm.length<=0){
+        return;
+      }
+      var _searchSource = utils.cloneArray($scope.productItems);
+      utils.emptyArray($scope.productItems);
+      angular.forEach(_searchSource,function(item,key){
+        if(item.name.toLowerCase().indexOf($scope.searchTerm)>=0){
+          $scope.productItems.push(item);
+        }
+      });
+    }
+
     $scope.addFilter = function(category){
       var cats = $scope.filters;
       var pos = cats.indexOf(category);
@@ -152,19 +183,17 @@ angular.module('fermaApp')
         cats.splice(pos,1);
       else
         cats.push(category);
+      $scope.searchTerm='';
+      applyFiltering();
 
-      if(cats.length===0){
-        utils.copyArray($scope.productItems,$scope.tempProducts);
-        return;
-      }
-
-      utils.emptyArray($scope.productItems);
-      angular.forEach($scope.tempProducts,function(item,key){
-        if(cats.indexOf(item.category)>=0){
-          $scope.productItems.push(item);
-        }
-      });
     };
+
+    $scope.search = function(){
+      applyFiltering();
+      applySearch();
+    }
+
+
 
     $scope.isActive = function(filter){
       return $scope.filters.indexOf(filter)>=0;

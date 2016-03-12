@@ -4,7 +4,7 @@
         <h1 class="no-margin">Filtre:</h1>
         <ul class="list-inline no-margin">
             <li ng-class="{'active' : isActive(filter.name)}" ng-repeat="filter in categories" ng-click="addFilter(filter.name)">{{ filter.name }}</li>
-            <li class="pull-right input"><input class="form-control" placeholder="Cauta..."/></li>
+            <li class="pull-right input"><input ng-change="search()" ng-model="searchTerm" class="form-control" placeholder="Cauta..."/></li>
         </ul>
     </div>
 
