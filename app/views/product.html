@@ -1,0 +1,28 @@
+<div id="product-page" class="container content">
+    <div class="row">
+        <div class="col-xs-4">
+            <flex-slider class="product-slider" slide="product in productImages track by $index" animation="slide">
+                <li liquid>
+                    <img ng-src="{{product}}">
+                </li>
+            </flex-slider>
+        </div>
+        <div class="col-xs-5">
+
+        </div>
+        <div class="col-xs-3">
+            <div class="pull-right">
+                <div class="rates">
+                    <h3 class="no-margin">Calificativ</h3>
+                    <div star-rating rating="" click="" ></div>
+                    <small>(200 calificative pozitive)</small>
+                </div>
+                <div class="profile-ctas">
+                    <ul class="list-unstyled no-margin">
+                        <li><button type="button" class="btn btn-primary">Vizualizare profil</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

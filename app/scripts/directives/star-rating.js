@@ -20,8 +20,7 @@ angular.module('fermaApp')
           restrict: 'EA',
           template:
               "<div style='display: inline-block; margin: 0px; padding: 0px; cursor:pointer;' ng-repeat='idx in maxRatings track by $index'> \
-                      <i ng-mouseleave='isolatedMouseLeave($index + 1)' ng-Click='isolatedClick($index + 1)' ng-mouseenter='isolatedMouseHover($index + 1)' class='material-icons'>{{((hoverValue + _rating) <= $index) && \"star_border\" || \"star\"}}</i>'\
-                      </i> \
+                      <i ng-mouseleave='isolatedMouseLeave($index + 1)' ng-Click='isolatedClick($index + 1)' ng-mouseenter='isolatedMouseHover($index + 1)' class='material-icons'>{{((hoverValue + _rating) <= $index) && \"star_border\" || \"star\"}}</i>\
               </div>",
           compile: function (element, attrs) {
               if (!attrs.maxRating || (Number(attrs.maxRating) <= 0)) {

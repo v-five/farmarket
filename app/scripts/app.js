@@ -16,7 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'wu.masonry'
+    'wu.masonry',
+    'angular-flexslider'
   ])
   .config(function ($routeProvider) {
     $routeProvider

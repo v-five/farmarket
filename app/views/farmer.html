@@ -1,4 +1,4 @@
-<div id="farmer-page" class="container">
+<div id="farmer-page" class="container content">
     <div class="row">
         <div class="col-xs-4">
             <div class="profile-img" liquid>
@@ -12,10 +12,16 @@
                 <span>Locatie de baza: Timisoara</span>
                 <hr />
                 <span>Locatii disponibile pentru transport:</span>
-                <ol class="no-padding available-locations">
+                <ol class="no-padding profile-list">
                     <li>Drobeta Tr. Severin</li>
                     <li>Sibiu</li>
                     <li>Constanta</li>
+                </ol>
+                <span>Produse vandute:</span>
+                <ol class="no-margin list-inline sell-products">
+                    <li>Ceapa</li>
+                    <li>Cartofi</li>
+                    <li>Praz</li>
                 </ol>
                 <button type="button" class="btn btn-primary">Adauga produs</button>
             </div>
@@ -39,11 +45,52 @@
         <div class="col-xs-12">
             <div class="farmer-products">
                 <h2 class="no-margin">Produsele vandute de Raoul</h2>
+                <hr />
                 <div column-width="1" preserve-order masonry>
                     <div ng-repeat="item in farmerProducts" class="masonry-brick" liquid>
                         <img ng-src="{{item.image}}" />
                         <div class="item-overlay">
                             <span>{{item.name}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="farmer-products">
+                <h2 class="no-margin">Recenzii</h2>
+                <hr />
+                <div class="reviews">
+                    <div class="item media">
+                        <a class="media-left" href="#" liquid>
+                            <img ng-src="http://lorempixel.com/600/800" class="media-object" />
+                        </a>
+                        <div class="media-body rates">
+                            <h4 class="media-heading">Media heading</h4>
+                            <div star-rating rating="" read-only="true" ></div>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        </div>
+                    </div>
+                    <div class="item media">
+                        <a class="media-left" href="#" liquid>
+                            <img ng-src="http://lorempixel.com/600/800" class="media-object" />
+                        </a>
+                        <div class="media-body rates">
+                            <h4 class="media-heading">Media heading</h4>
+                            <div star-rating rating="" read-only="true" ></div>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        </div>
+                    </div>
+                    <div class="item media">
+                        <a class="media-left" href="#" liquid>
+                            <img ng-src="http://lorempixel.com/600/800" class="media-object" />
+                        </a>
+                        <div class="media-body rates">
+                            <h4 class="media-heading">Media heading</h4>
+                            <div star-rating rating="" read-only="true" ></div>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
                         </div>
                     </div>
                 </div>

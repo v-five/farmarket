@@ -35,6 +35,8 @@ module.exports = function(config) {
       'bower_components/jquery-bridget/jquery-bridget.js',
       'bower_components/angular-masonry/angular-masonry.js',
       'bower_components/imgLiquid/js/imgLiquid.js',
+      'bower_components/flexslider/jquery.flexslider.js',
+      'bower_components/angular-flexslider/angular-flexslider.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',
