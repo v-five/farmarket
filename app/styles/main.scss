@@ -58,11 +58,12 @@ label {
     line-height: 27px;
     border-radius: 50px;
     text-transform:uppercase;
+    outline: 0;
     @include transition(.3);
     &:hover, &:focus, &:active, &:visited {
         color: #fff!important;
         background-color: $light-green!important;
-        border-color: $green!important;
+        border-color: $light-green !important;
     }
 
 }
@@ -214,6 +215,27 @@ label {
   }
 
 
+  margin-bottom: 20px;
+  li{
+    border:1px solid $green;
+    border-radius: 50px;
+    padding:5px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    @include transition(.3);
+    &:hover, &.active{
+      color:white;
+      background: $green;
+    }
+  }
+  h1{
+    font-size:27px;
+    float:left;
+    color:#777777;
+    font-weight: 200;
+    margin-right: 10px;
+  }
+}
 /************* HEADER ****************/
 
 header{
