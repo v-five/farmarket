@@ -59,10 +59,10 @@ label {
     border-radius: 50px;
     text-transform:uppercase;
     @include transition(.3);
-    &:hover, &:focus {
-        color: #fff;
-        background-color: $light-green;
-        border-color: $light-green;
+    &:hover, &:focus, &:active, &:visited {
+        color: #fff!important;
+        background-color: $light-green!important;
+        border-color: $green!important;
     }
 
 }
@@ -110,18 +110,35 @@ label {
 /************* HEADER ****************/
 
 header{
-  height: 55px;
-  line-height: 55px;
-  
+  height: 85px;
+  padding-top:30px;
+  border-top:6px solid $green;
   box-shadow: 0 1px 1px rgba(0,0,0,.2);
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#009651+0,0ec049+100 */
-    background: #009651; /* Old browsers */
-    background: -moz-linear-gradient(top,  #009651 0%, #0ec049 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  #009651 0%,#0ec049 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  #009651 0%,#0ec049 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009651', endColorstr='#0ec049',GradientType=0 ); /* IE6-9 */
+  
+    background: #fff;
     font-size:1.2em;
   color:white;
+  .logo {
+      margin-top:3px;
+      display:inline-block;
+  }
+  .list-inline > li {
+      font-weight:400;
+      float:left;
+      padding-left:10px;
+      
+      a {
+            border-color:$green;
+            color:$green;
+            margin:0;
+            vertical-align:top;
+            border-radius:34px;
+            padding: 6px 20px;
+            font-size:0.8em;
+      }
+
+  }
+
 }
 
 .masonry-brick{
