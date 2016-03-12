@@ -37,6 +37,8 @@ module.exports = function(config) {
       'bower_components/imgLiquid/js/imgLiquid.js',
       'bower_components/flexslider/jquery.flexslider.js',
       'bower_components/angular-flexslider/angular-flexslider.js',
+      'bower_components/ng-tags-input/ng-tags-input.min.js',
+      'bower_components/dropzone/dist/min/dropzone.min.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

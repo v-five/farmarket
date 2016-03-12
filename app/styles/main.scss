@@ -108,6 +108,18 @@ label {
   }
 }
 
+.dropzone{
+  border:1px solid $light-green;
+  border-radius: 5px;
+  .dz-message{
+    color:$green;
+    font-weight: 200;
+  }
+  .dz-progress{
+    margin-top: 27px !important;
+  }
+}
+
 
 .flex-control-nav {
   background:none;
@@ -359,6 +371,7 @@ header{
     }
 
     button{
+      outline: 0;
       margin-top: 10px;
       padding:4px 20px;
     }
@@ -442,13 +455,47 @@ header{
 
 .form-general {
   width: 400px;
-  margin:15% auto 0 auto;
+  margin:0 auto 0 auto;
   font-size:1.4em;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius:7px;
   background: #fff;
   padding:30px 20px;
   box-shadow: 0 0 8px rgba(0,0,0, .12);
+
+  &.add-product{
+    width: 800px;
+    min-height: 550px;
+  }
+
+  textarea{
+    border-radius: 5px;
+    resize:none;
+    min-height: 150px;
+  }
+
+  .relative{
+    position: relative;
+    input{
+      padding-right:50px;
+    }
+    span{
+      font-size:14px;
+      color: #777777;
+      right:10px;
+      bottom:10px;
+      position: absolute;
+    }
+    select{
+      font-size:14px;
+      color:#777;
+      outline: 0;
+      position: absolute;
+      right:10px;
+      bottom:10px;
+      border:none;
+    }
+  }
 }
 
 #product-page{
@@ -521,6 +568,31 @@ header{
       &:checked + label:after {
         opacity: 1;
       }
+    }
+  }
+}
+
+#tags{
+  outline: 0;
+  .tags{
+    min-height: 42px;
+    padding-top: 5px;
+    outline: 0;
+    padding-left: 5px;
+    border-color: $light-green;
+    border-radius: 5px;
+    box-shadow: none;
+    .tag-list{
+      float:left;
+    }
+  }
+  .tag-item{
+    border:none;
+    background: $light-green;
+    color:white;
+    border-radius: 20px;
+    a{
+      color:white;
     }
   }
 }

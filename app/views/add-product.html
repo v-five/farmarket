@@ -1,22 +1,52 @@
 <div id="add-product" class="container content">
     <div class="row">
         <form class="add-product form-general">
-            <fieldset class="form-group">
-                <label for="name">Nume produs</label>
-                <input name="name" type="text" class="form-control" id="name" placeholder="Introduce nume">
-            </fieldset>
-            <fieldset class="form-group">
-                <label for="categorie">Categorie</label>
-                <select name="category" class="form-control" id="categorie">
-                    <option value="-1">Adauga produs</option>
-                </select>
-            </fieldset>
-            <fieldset class="form-group">
-                <label for="tags">Taguri</label>
-                <input name="tags" type="text" class="form-control" id="tags" placeholder="Adauga taguri">
-            </fieldset>
+            <div class="col-xs-6">
+                <fieldset class="form-group">
+                    <label for="name">Nume produs</label>
+                    <input name="name" type="text" class="form-control" id="name" placeholder="Adauga nume">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label for="categorie">Categorie</label>
+                    <select name="category" class="form-control" id="categorie">
+                        <option value="-1">Adauga categorie</option>
+                    </select>
+                </fieldset>
+                <fieldset class="form-group">
+                    <label for="tags">Taguri</label>
+                    <tags-input ng-model="tags" id="tags" placeholder="Adauga taguri">
+                        <auto-complete source="loadTags($query)"></auto-complete>
+                    </tags-input>
+                </fieldset>
+                <fieldset class="form-group">
+                    <label for="description">Descriere</label>
+                    <textarea id="description" placeholder="Adauga o descriere..." class="form-control"></textarea>
+                </fieldset>
+            </div>
+            <div class="col-xs-6">
+                <fieldset class="form-group relative">
+                    <label for="price">Pret</label>
+                    <input name="price" type="text" class="form-control" id="price" placeholder="Seteaza pretul">
+                    <span>RON</span>
+                </fieldset>
+                <fieldset class="form-group relative">
+                    <label for="quantity">Pret</label>
+                    <input name="quantity" type="text" class="form-control" id="quantity" placeholder="Seteaza cantitatea">
+                    <select name="quantity_type">
+                        <option value="1" selected>kg</option>
+                        <option value="2">l</option>
+                        <option value="2">ml</option>
+                    </select>
+                </fieldset>
+                <fieldset class="form-group">
+                    <label for="photos">Adauga poze</label>
+                    <div class="dropzone" dropzone id="file-dropzone">
+                    </div>
+                </fieldset>
 
-            <button type="submit" class="btn btn-primary">Adauga produs</button>
+                <button type="submit" class="btn btn-primary">Adauga produs</button>
+            </div>
+
         </form>
     </div>
 </div>

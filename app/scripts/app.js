@@ -17,7 +17,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'wu.masonry',
-    'angular-flexslider'
+    'angular-flexslider',
+    'ngTagsInput'
   ])
   .config(function ($routeProvider) {
     $routeProvider
